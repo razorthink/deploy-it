@@ -1,0 +1,14 @@
+{
+  "name": "Deploy-It",
+  "preferGlobal": true,
+  "version": "0.0.5",
+  "author": "Sandeep S Kumar <sandeep.kumar@razorthink.com>",
+  "description": "An iOS Over-The-Air deployment and management app",
+  "dependencies": {
+    "express": "*",
+    "express-logger": "*",
+    "google-url": "*",
+    "underscore": "*",
+    "q": "*"
+  }
+}

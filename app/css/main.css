@@ -1,0 +1,608 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+/* Google fonts: opensans */
+
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+#app {
+    background: #fff; bottom: 0; left: 0; 
+    overflow: auto; 
+    position: absolute; right: 0; top: 0;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#app header.mobile {
+    display: none;
+    background: #2576AC;
+    padding: 4% 5%;
+}
+
+#app-sidebar {
+    background: #2576AC; bottom: 0;  left: 0; 
+    overflow-y: auto; 
+    overflow-x: hidden;
+    position: absolute; top: 0; 
+    width: 300px;
+    color: white;
+    padding: 2px 30px;
+}
+
+header h1 {
+    font-size: 45px;
+    line-height: 45px;
+    margin: 0.67em 0 0 0;
+}
+
+#app-sidebar .maker {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: -5px;
+    margin-left: 2px;
+    display: block;
+    color: rgba(255, 255, 255, 1);
+}
+
+#app-sidebar .file-upload-container {
+    margin: 25% 0 8%;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: none;
+}
+
+.modal .close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    border: none;
+    background: rgb(230, 125, 125);
+    color: white;
+    font-size: 8pt;
+}
+
+.download-url, .confirmation {
+    background: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    width: 500px;
+    padding: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -65px;
+    color: rgb(51, 51, 51);
+    text-align: center;
+    display: none;
+}
+
+.download-url-link .url {
+    margin-top: 10px;
+    display: block;
+    font-size: 18pt;
+    color: rgb(0, 214, 255);
+}
+
+.modal .confirmation input {
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 7px 8px;
+    width: 100px;
+}
+
+.modal .confirmation .confirm{
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+    padding: 8px 12px;
+}
+
+.modal .confirmation .confirm { 
+    background: rgb(136, 216, 116);
+}
+
+.modal .confirmation .cancel {
+    
+}
+
+#app-sidebar .file-upload-container #fileUpload {
+    min-height: 240px;
+    border: 3px dashed rgba(255, 255, 255, 0.8);
+    text-align: center;
+    color: #2576AC;
+}
+
+#app-sidebar .description-form-container {
+    margin: 5% 0 5%;
+    -webkit-transition: all 0.3s;
+}
+
+#app-sidebar .description-form-container .message {
+    display: none;
+}
+
+#app-sidebar #description {
+    
+}
+
+#app-sidebar #description input[type='text'] {
+    width: 100%;
+    margin: 8px 0;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.9);
+    color: rgb(60, 135, 185);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+::-webkit-input-placeholder {
+   color: rgb(147, 190, 218);
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 300;
+   font-size: 14px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: rgb(147, 190, 218);
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 300;
+   font-size: 14px;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: rgb(147, 190, 218);
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 300;
+   font-size: 14px;
+}
+
+:-ms-input-placeholder {  
+   color: rgb(147, 190, 218);
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 300;
+   font-size: 14px;
+}
+
+#app-sidebar #description button {
+    margin: 10px 10px 10px 0;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+    padding: 8px 12px;
+}
+
+#app-sidebar #description #description-cancel {
+    background: rgb(228, 121, 121);
+}
+
+#app-sidebar #description #description-submit {
+    background: rgb(133, 202, 106);
+    width: 190px;
+    float: right;
+    margin-right: 0;
+}
+
+#app-contents { 
+    bottom: 0; 
+    left: 300px; 
+    min-width: 568px; 
+    position: absolute; 
+    right: 0; 
+    top: 0; 
+    width: auto;
+    overflow: scroll; 
+    padding: 4% 5%;
+}
+
+#app-contents #application-list {
+    width: 100%;
+    font-size: 14px;
+    color: rgb(83, 90, 94);
+    font-weight: normal;
+}
+
+#app-contents #application-list tr:last-child td {
+    border-bottom: none;
+}
+
+#app-contents #application-list tr:hover {
+    background: rgb(248, 253, 253);
+}
+
+#app-contents #application-list td {
+    border-bottom: 1px solid #DFE6EB;
+    padding: 8px 0;
+    white-space: nowrap;
+}
+
+#app-contents #application-list .name .title {
+    font-weight: 700;
+}
+
+#app-contents #application-list .name .author {
+
+}
+
+#app-contents #application-list .name .time,
+#app-contents #application-list .name .bundle {
+    font-size: 12px;
+    color: rgb(172, 172, 172);
+}
+
+#app-contents #application-list .download-link {
+    text-align: right;
+    color: rgb(160, 165, 168);
+    padding-right: 5px;
+    width: 80px;
+}
+
+#app-contents #application-list .download-link a {
+    display: block;
+    background: rgb(87, 162, 204);
+    text-decoration: none;
+    width: 100%;
+    height: 30px;
+    float: right;
+    background-image: url("../images/download.png");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: 50%;
+    border-radius: 4px;
+}
+
+#app-contents #application-list .delete {
+    width: 45px;
+
+}
+
+#app-contents #application-list .delete button { border: none; border-radius: 4px; color: white; font-size: 12px; padding: 8px 12px;
+    
+    background: rgb(228, 121, 121);
+    float: right;
+}
+
+/* customising dropzone */
+.dropzone .dz-default.dz-message span {
+    color: rgba(255, 255, 255, 0.75);
+    display: block;
+}
+
+.dropzone .dz-default.dz-message {
+    background-image: none;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (max-width : 600px) { 
+    #app header.mobile {
+        display: block;
+        color: white
+    }
+
+    #app header.mobile > h1 {
+        margin: 0;
+    }
+
+    #app-contents {
+        left: 0;
+        width: 100%;
+        min-width: 0;
+        margin-top: 7em;
+    }
+    
+    #app-contents #application-list .delete {
+        display: none;
+    }
+    
+    #app-contents #application-list .name .title {
+    font-size: 18px;
+        
+    }
+    
+    #app-sidebar {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
